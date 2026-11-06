@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cyx1aiwih6qyy"]
+
+[ext_resource type="PackedScene" uid="uid://ckcs0xuswblo4" path="res://assets/ui/panel.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://7p4ytawcolhk" path="res://assets/ui/button.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://c48uko48iuiaq" path="res://assets/ui/GUI_1x.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://280iwspo7onr" path="res://assets/images/title_placeholder.png" id="4_1bvp3"]
+
+[node name="main" type="Node2D" unique_id=1214228339]
+
+[node name="TitlePlaceholder2" type="Sprite2D" parent="." unique_id=216945555]
+texture = ExtResource("4_1bvp3")
+centered = false
+
+[node name="text_panel" parent="." unique_id=731078714 instance=ExtResource("1_ig7tw")]
+visible = false
+offset_left = 86.0
+offset_top = 44.0
+offset_right = 546.0
+offset_bottom = 164.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=299846115]
+visible = false
+offset_left = 194.0
+offset_top = 170.0
+offset_right = 448.0
+offset_bottom = 348.0
+texture = ExtResource("2_h2yge")
+region_rect = Rect2(32, 56, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=178319924]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=1636341695]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Button" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=762510597 instance=ExtResource("2_0xm2m")]
+layout_mode = 2
+
+[node name="Button2" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=977744408 instance=ExtResource("2_0xm2m")]
+layout_mode = 2
+
+[node name="Button3" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1102112925 instance=ExtResource("2_0xm2m")]
+layout_mode = 2
+
+[node name="Button4" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1641065753 instance=ExtResource("2_0xm2m")]
+layout_mode = 2
